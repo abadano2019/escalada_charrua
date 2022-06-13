@@ -1278,3 +1278,20 @@ table.cursos-costos {
 		transform: scale(1);
 	}	
 }
+
+/*///////////////////////B O O K S T R A P///////////////////////*/
+
+a.nav-link{
+	color: yellow;
+	font-size: 2rem;
+}
+
+img.d-inline-block.align-top {
+    padding: 0 1rem;
+}
+
+span.navbar-toggler-icon{
+	border: 3px solid yellow;
+	width: 3rem;
+	height: 3rem;
+}
