@@ -3,13 +3,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family= Montserrat:wght@200;300;500;700;900&display=swap');
 
+/* Uso de fuentes*/
+
 /* font-family: 'Lato', sans-serif;
    font-family: 'Roboto', sans-serif;
    font-family: 'Montserrat', sans-serif;  */
 
 /*////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*                                               VARIABLES                                                    */
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
-/*normalizacion*/   
+/*Para implementar*/
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*-------------------------------------------------------------------------------------------------*/
+/*                                          Normalizacion                                          */ 
+/*-------------------------------------------------------------------------------------------------*/  
+
 *{
 	margin: 0;
 	padding: 0;
@@ -23,13 +36,13 @@
 
 html {
 	font-size: 62.5%;
+	height: 100%;
 }
 
 body {
 	font-family: 'Montserrat', sans-serif;
 	background-color:burlywood;
-	/*background-image: url('../img/Escaladores-6.jpg');
-	background-image: cover;*/	
+	min-height: 100%;
 }
 
 ul, ol {
@@ -93,16 +106,17 @@ p {
 	padding: 1rem;
 }
 
-/* ----------------- Fin Normalización ------------------------*/
+/*-------------------------------------------------------------------------------------------------*/
+/* --------------------------------- Fin Normalización --------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------*/
 
 /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
-/*-------------------------------------------------------------*/
-/* -----------------------Header-------------------------------*/
-/*-------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------*/
+/* ---------------------------------       Header      --------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------*/
 
 header {
-	/*background-color:darkblue;*/
 	/*///////////////////////////////////////////////////////////////*/
 	background: linear-gradient(to left, darkblue, rgb(4, 149, 197));
 	/*//////////////////////////////////////////////////////////////*/
@@ -130,60 +144,9 @@ header .header__logo {
 	padding: 5px;
 }
 
-.menu {
-	display: flex;
-	gap: 2rem;
-}
-
-.menu__item {
-	color: yellow;
-}
-
-.menu .menu__link--active {
-	text-transform: uppercase;
-	/*color: yellow;*/
-	font-size: 2.2rem;
-	padding: 1rem 1.2rem;
-	text-shadow: white 0.1em 0.1em 0.2em;
-	border: 2px solid rgb(12, 2, 2);
-	transition: background-color 1s;
-}
-
-.menu .menu__link--active:hover {
-	text-transform: uppercase;
-	/*color: yellow;*/
-	font-size: 2.2rem;
-	padding: 1rem 1.2rem;
-	text-shadow: white 0.1em 0.1em 0.2em;
-	color: rgb(222, 242, 248);
-	background-color: rgb(12, 2, 2);
-	
-	
-
-}
-
-.menu .menu__link {
-	font-size: 2.2rem;
-	padding: 1rem 1.2rem;
-	border: 2px solid rgb(12, 2, 2);
-	transition: background-color 1s;
-	/*background: linear-gradient(to left, yellow, red)
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;*/
-}
-
-.menu .menu__link:hover {
-	color: rgb(222, 242, 248);
-	background-color: rgb(12, 2, 2);
-	
-	/*background: linear-gradient(to left, yellow, red)
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;*/
-}
-	
-/*-------------------------------------------------------------*/
-/* -----------------------footer-------------------------------*/
-/*-------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------*/
+/* ---------------------------------       Footer      --------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------*/
 
 footer {
 	background-color:darkblue;
@@ -210,7 +173,6 @@ footer {
     align-content: center;
 	justify-content: flex-end;
 	flex-wrap: wrap;
-	/*padding-left: 10rem;*/
 }
 
 .footer-left {
@@ -232,18 +194,22 @@ footer {
 }
 
 /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-
-/* Clases especificas, comunes, para otras paginas*/
+/*                             Clases especificas, comunes, para otras paginas                                 */
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 .body-background-none {
 	background-color:burlywood;
-	/*background-color:brown;*/
 	background-image: none;
 }
 
-/*--------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+/*------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------*/
 
 /*--------------------------------------------------------- */
 /* ------------- Clases para pagina Home (Index) ---------- */
@@ -252,10 +218,6 @@ footer {
 .index-titulo h1 {
 	text-align: center;
 	text-shadow: black 0.1em 0.1em 0.2em;
-	/*text-shadow: 0.2em 0.5em 0.1em #600,
-	  -0.3em 0.1em 0.1em #060,
-	  0.4em -0.3em 0.1em #006;*/
-	/*text-shadow: 0 0 0.2em #87F, 0 0 0.2em #87F,0 0 0.2em #87F;*/
 	margin: 2rem;
 }
 
@@ -357,9 +319,9 @@ footer {
 	height: auto;
 }
 
-/*--------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------*/
 
 /*--------------------------------------------------------- */
 /* ------------- Clases para pagina Contacto -------------- */
@@ -374,15 +336,10 @@ footer {
 	color:yellow;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 700;
-	/*font-size: 28px;*/
 	text-align: center;
 	padding: 1rem;
 	text-align: center;
 	text-shadow: black 0.1em 0.1em 0.2em;
-	/*text-shadow: 0.2em 0.5em 0.1em #600,
-	  -0.3em 0.1em 0.1em #060,
-	  0.4em -0.3em 0.1em #006;*/
-	/*text-shadow: 0 0 0.2em #87F, 0 0 0.2em #87F,0 0 0.2em #87F;*/
 	margin: 2rem;
 }
 
@@ -400,57 +357,6 @@ footer {
 	flex-direction: column;
 	align-items: center;
 }
-
-/*////////////* B O T O N E S /////////////*/
-
-/*botón rectangular*/
-
-/*.form-container__form__btn {
-	text-decoration:solid;
-	font-weight:500;
-	font-size:20px;
-	color:#ffffff;
-	padding-top:10px;
-	padding-bottom:10px;
-	padding-left:20px;
-	padding-right:20px;
-	background-color:#005BBB;
-}*/
-
-/* Boton transparente*/
-
-/*.form-container__form__btn {
-	text-decoration:none;
-	font-weight: 600;
-	font-size: 20px;
-	color:#000000;
-	padding-top:15px;
-	padding-bottom:15px;
-	padding-left:40px;
-	padding-right:40px;
-	background-color: transparent;
-	border-width: 3px;
-	border-style: solid;
-	border-color: #000000;
-}*/
-
-/*Boton con bordes redondeados*/
-	
-/*.form-container__form__btn {
-	text-decoration:none;
-	font-weight: 600;
-	font-size: 20px;
-	color:yellow;
-	padding-top:15px;
-	padding-bottom:15px;
-	padding-left:40px;
-	padding-right:40px;
-	background-color:#005BBB;
-	border-color: #d8d8d8;
-	border-width: 3px;
-	border-style: solid;
-	border-radius:35px;
-}*/
 
 .form__btn {
 	text-decoration:none;
@@ -495,9 +401,9 @@ footer {
 }
 
 
-/*--------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------*/
 
 /*--------------------------------------------------------- */
 /* ------------- Clases para la pagina Galeria ------------ */
@@ -542,20 +448,12 @@ footer {
 .galery-titulo h1 {
 	text-align: center;
 	text-shadow: black 0.1em 0.1em 0.2em;
-	/*text-shadow: 0.2em 0.5em 0.1em #600,
-	  -0.3em 0.1em 0.1em #060,
-	  0.4em -0.3em 0.1em #006;*/
-	/*text-shadow: 0 0 0.2em #87F, 0 0 0.2em #87F,0 0 0.2em #87F;*/
 	margin: 2rem;
 }
 
 .galery-subtitulo-1 h2 {
 	text-align: center;
 	text-shadow: black 0.1em 0.1em 0.2em;
-	/*text-shadow: 0.2em 0.5em 0.1em #600,
-	  -0.3em 0.1em 0.1em #060,
-	  0.4em -0.3em 0.1em #006;*/
-	/*text-shadow: 0 0 0.2em #87F, 0 0 0.2em #87F,0 0 0.2em #87F;*/
 	margin: 2rem;
 }
 
@@ -602,6 +500,13 @@ footer {
 	list-style-type:square;
 }
 
+.card-2 {
+	display: flex;
+	flex-direction: row;
+	align-content:center;
+	justify-content: flex-start;
+}
+
 .card-2__description {
 	max-width: 200px;
 	padding: 3rem;
@@ -609,6 +514,13 @@ footer {
 
 .card-2__detalle {
 	list-style-type:square;
+}
+
+.card-3 {
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
 }
 
 .card-3__description {
@@ -620,6 +532,14 @@ footer {
 	list-style-type:square;
 }
 
+.card-4 {
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
+
+}
+
 .card-4__description {
 	max-height: 400px;
 	padding: 3rem;
@@ -627,28 +547,6 @@ footer {
 
 .card-4__detalle {
 	list-style-type:square;
-}
-
-.card-2 {
-	display: flex;
-	flex-direction: row;
-	align-content:center;
-	justify-content: flex-start;
-}
-
-.card-3 {
-	display: flex;
-	flex-direction: column;
-	align-content: center;
-	justify-content: center;
-}
-
-.card-4 {
-	display: flex;
-	flex-direction: column;
-	align-content: center;
-	justify-content: center;
-
 }
 
 .galery {
@@ -688,88 +586,13 @@ footer {
 }
 
 
-/*--------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------*/
-
+/*------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------*/
 
 /*--------------------------------------------------------- */
 /* ------------- Clases para la pagina Cursos ------------- */
 /*--------------------------------------------------------- */
-
-.cursos-container_titulo-cursos {
-	color:yellow;
-	font-family: 'Roboto', sans-serif;
-	font-weight: 700;
-	/*font-size: 28px;*/
-	text-align: center;
-	padding: 1rem;
-}
-
-.cursos-container {
-	padding: 0 5rem 10rem 5rem;
-}
-
-.cursos-container h3 {
-	color:black;
-	font-family: 'Roboto', sans-serif;
-	font-weight: 500;
-	/*font-size: 28px;*/
-	text-align: justify;
-	padding: 1rem;
-}
-
-.cursos-descripcion h2 {
-	color:yellow;
-	font-family: 'Roboto', sans-serif;
-	font-weight: 500;
-	font-size: 2rem;
-	text-align: center;
-	padding: 2rem;
-
-	text-align: center;
-	text-shadow: black 0.1em 0.1em 0.2em;
-	/*text-shadow: 0.2em 0.5em 0.1em #600,
-	  -0.3em 0.1em 0.1em #060,
-	  0.4em -0.3em 0.1em #006;*/
-	/*text-shadow: 0 0 0.2em #87F, 0 0 0.2em #87F,0 0 0.2em #87F;*/
-	margin: 2rem;
-}
-
-.cursos-container h1 {
-	color:yellow;
-	font-family: 'Roboto', sans-serif;
-	font-weight: 700;
-	/*font-size: 28px;*/
-	text-align: center;
-	padding: 1rem;
-}
-
-table.cursos-costos {
-	color: rgb(44, 41, 41);
-	font-size: 1.5rem;
-	font-family: 'Roboto', sans-serif;
-	font-weight: 500;
-	text-align: left;
-}
-
-.cursos-titulo h1 {
-	text-align: center;
-	text-shadow: black 0.1em 0.1em 0.2em;
-	/*text-shadow: 0.2em 0.5em 0.1em #600,
-	  -0.3em 0.1em 0.1em #060,
-	  0.4em -0.3em 0.1em #006;*/
-	/*text-shadow: 0 0 0.2em #87F, 0 0 0.2em #87F,0 0 0.2em #87F;*/
-	margin: 2rem;
-}
-
-.cursos {
-	display: flex;
-	align-items: center;
-	align-content: center;
-	flex-direction: column;
-	padding: 0 5rem;
-}
 
 .cursos-descripcion {
 	display: grid;
@@ -783,58 +606,52 @@ table.cursos-costos {
 	
 }
 
+.cursos-descripcion h2 {
+	color:yellow;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+	font-size: 2rem;
+	text-align: center;
+	padding: 2rem;
 
-/*--------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------*/
+	text-align: center;
+	text-shadow: black 0.1em 0.1em 0.2em;
+	margin: 2rem;
+}
 
+.cursos {
+	display: flex;
+	align-items: center;
+	align-content: center;
+	flex-direction: column;
+	padding: 0 5rem;
+}
+
+table.cursos-costos {
+	color: rgb(44, 41, 41);
+	font-size: 1.5rem;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+	text-align: left;
+}
+
+.cursos-titulo h1 {
+	text-align: center;
+	text-shadow: black 0.1em 0.1em 0.2em;
+	margin: 2rem;
+}
+
+/*------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------*/
 
 /*--------------------------------------------------------- */
 /* ------------- Clases para la pagina Empresa ------------- */
 /*--------------------------------------------------------- */
 
-.empresa-container {
-	padding: 0rem 5rem 10rem 5rem;
-}
-
-.empresa-container_titulo-empresa {
-	font-family: 'Roboto', sans-serif;
-	font-weight: 700;
-}
-.empresa-container h3 {
-	color:black;
-	font-family: 'Roboto', sans-serif;
-	font-weight: 500;
-	/*font-size: 28px;*/
-	text-align: justify;
-	padding: 1rem;
-}
-
-.empresa-container h2 {
-	color:black;
-	font-family: 'Roboto', sans-serif;
-	font-weight: 500;
-	/*font-size: 28px;*/
-	text-align: left;
-	padding: 1rem;
-}
-
-.empresa-container h1 {
-	color:yellow;
-	font-family: 'Roboto', sans-serif;
-	font-weight: 700;
-	/*font-size: 28px;*/
-	text-align: center;
-	padding: 1rem;
-}
-
 .empresa-titulo h1 {
 	text-align: center;
 	text-shadow: black 0.1em 0.1em 0.2em;
-	/*text-shadow: 0.2em 0.5em 0.1em #600,
-	  -0.3em 0.1em 0.1em #060,
-	  0.4em -0.3em 0.1em #006;*/
-	/*text-shadow: 0 0 0.2em #87F, 0 0 0.2em #87F,0 0 0.2em #87F;*/
 	margin: 2rem;
 }
 
@@ -842,15 +659,57 @@ table.cursos-costos {
 	max-height: 20px;
 }
 
-.empresa {
-	display: grid;
-	grid-auto-flow:column;
-	grid-template-columns: repeat(12, 1fr);
-	grid-template-rows: repeat(15, 100px);
-	gap: 1rem;
-	padding: 5rem;
+.empresa-articulo-0{
+	grid-area: "titulo-articulo-1";
+	padding: 3rem;
+	display: flex;
+	align-items:baseline;
+	justify-content: center;
+}
+
+.empresa-articulo-1{
+	grid-area: "articulo-1";
+}
+
+.empresa-articulo-2{
+	grid-area: "titulo-articulo-2";
+	padding: 3rem;
+	display: flex;
+	align-items:baseline;
+	justify-content: center;
+}
+
+.empresa-articulo-3{
+	grid-area: "articulo-2";
+}
+
+.empresa-articulo-4{
+	grid-area: "titulo-articulo-3";
+	padding: 3rem;
+	display: flex;
+	align-items:baseline;
+	justify-content: center;
+}
+
+.empresa-articulo-5{
+	grid-area: "articulo-3";
+}
+
+.empresa{
+	display:grid;
+	gap: 5px;
+	grid-template-areas:
+		"titulo-articulo-1" auto
+		"articulo-1"		auto
+		"titulo-artiuclo-2" auto
+		"articulo-2"		auto
+		"titulo-articulo-3" auto
+		"articulo-3"		auto /
+		auto;
+	gap: 1em;
+	padding: 5em;
 	border: rgb(192, 6, 6) 5px solid;
-	margin: 5rem 5rem;
+	margin: 5em 5em;
 	align-content: stretch;
 }
 
@@ -859,46 +718,13 @@ table.cursos-costos {
 	align-items: flex-start;
 }
 
-.empresa .empresa-articulo-0 {
-	grid-column: 1/13;
-	grid-row: 1/2;
-}
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
 
-.empresa .empresa-articulo-1 {
-	grid-column: 1/13;
-	grid-row: 2/5;
-	object-fit: cover;
-}
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@    MEDIA QUERY    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
 
-.empresa .empresa-articulo-2 {
-	grid-column:  1/13;
-	grid-row: 6/7;
-	object-fit: cover;
-}
-
-.empresa .empresa-articulo-3 {
-	grid-column:  1/13;
-	grid-row: 7/11;
-	object-fit: cover;
-}
-
-.empresa .empresa-articulo-4 { 
-	grid-column:  1/13;
-	grid-row:11/15;
-	object-fit: cover;
-}
-
-.empresa .empresa-articulo-5 {
-	grid-column:  1/13;
-	grid-row:12/15;
-	object-fit: cover;
-}
-
-/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
-
-/*--------------------------------------------------------------------------------------*/
-/*-----------------------             Media Query           ----------------------------*/
-/*--------------------------------------------------------------------------------------*/
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
 
 @media screen and (max-width: 650px) {
 	header nav{
@@ -962,9 +788,9 @@ table.cursos-costos {
 	}
 
 
-	/* -------------------------------------------------------*/
-	/* --------------            Galeria            ----------*/
-	/* -------------------------------------------------------*/
+	/* -----------------------------------------*/
+	/* -----------      Galeria       ----------*/
+	/* -----------------------------------------*/
 
 	.galery {
 		display: grid;
@@ -1019,65 +845,33 @@ table.cursos-costos {
 		object-fit: cover;
 	}	
 
-	/* -------------------------------------------------------*/
-	/* --------------            Empresa            ----------*/
-	/* -------------------------------------------------------*/
+	/* -----------------------------------------*/
+	/* -----------      Empresa       ----------*/
+	/* -----------------------------------------*/
 
-
-	.empresa {
-		display: grid;
-		grid-auto-flow:column;
-		grid-template-columns: repeat(12, 1fr);
-		grid-template-rows: repeat(20, 100px);
-		gap: 1rem;
-		padding: 5rem;
-		border: rgb(192, 6, 6) 5px solid;
-		margin: 5rem 5rem;
-		align-content: stretch;
-	}
-	
 	.empresa-formato-texto {
 		align-content: center;
 		align-items: flex-start;
 	}
-	
-	.empresa .empresa-articulo-0 {
-		grid-column: 1/13;
-		grid-row: 1/2;
-	}
-	
-	.empresa .empresa-articulo-1 {
-		grid-column: 1/13;
-		grid-row: 2/7;
-		object-fit: cover;
-	}
-	
-	.empresa .empresa-articulo-2 {
-		grid-column:  1/13;
-		grid-row: 7/8;
-		object-fit: cover;
-	}
-	
-	.empresa .empresa-articulo-3 {
-		grid-column:  1/13;
-		grid-row: 8/14;
-		object-fit: cover;
-	}
-	
-	.empresa .empresa-articulo-4 {
-		grid-column:  1/13;
-		grid-row:14/15;
-		object-fit: cover;
-	}
-	
-	.empresa .empresa-articulo-5 {
-		grid-column:  1/13;
-		grid-row:15/21;
-		object-fit: cover;
+
+	.empresa-articulo-0{
+		padding-bottom: 7rem;
 	}
 
+	.empresa-articulo-2{
+		padding-bottom: 7rem;
+	}
+
+	.empresa-articulo-4{
+		padding-bottom: 7rem;
+	}
 
 }
+
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@    MEDIA QUERY    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
 
 /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
 /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
@@ -1088,22 +882,6 @@ table.cursos-costos {
 		gap: 2rem;
 	}
 	
-	header nav .menu {
-		flex-direction: column;
-	}
-
-	.menu {
-		row-gap: 0rem;
-	}
-
-	.menu__link {
-		font-size: 1.5rem;
-	}
-
-	.menu__link--active {
-		font-size: 1.5rem;
-	}
-
 	h1{
 		font-size: 16px;
 	}
@@ -1141,66 +919,25 @@ table.cursos-costos {
 		/*padding-left: 10rem;*/
 	}
 
-	/* -------------------------------------------------------*/
-	/* --------------            Empresa            ----------*/
-	/* -------------------------------------------------------*/
+	/* ----------------------------------*/
+	/* ----------   Empresa    ----------*/
+	/* ----------------------------------*/
 
-
-	.empresa {
-		display: grid;
-		grid-auto-flow:column;
-		grid-template-columns: repeat(12, 1fr);
-		grid-template-rows: repeat(20, 100px);
-		gap: 1rem;
-		padding: 0.5rem;
-		border: rgb(192, 6, 6) 5px solid;
-		margin: 1rem 1rem;
-		align-content: stretch;
-	}
-	
-	.empresa-formato-texto {
-		align-content: center;
-		align-items: flex-start;
-	}
-	
-	.empresa .empresa-articulo-0 {
-		grid-column: 1/13;
-		grid-row: 1/2;
-	}
-	
-	.empresa .empresa-articulo-1 {
-		grid-column: 1/13;
-		grid-row: 2/8;
-		object-fit: cover;
-	}
-	
-	.empresa .empresa-articulo-2 {
-		grid-column:  1/13;
-		grid-row: 8/9;
-		object-fit: cover;
-	}
-	
-	.empresa .empresa-articulo-3 {
-		grid-column:  1/13;
-		grid-row: 9/16;
-		object-fit: cover;
-	}
-	
-	.empresa .empresa-articulo-4 {
-		grid-column:  1/13;
-		grid-row:16/17;
-		object-fit: cover;
-	}
-	
-	.empresa .empresa-articulo-5 {
-		grid-column:  1/13;
-		grid-row:17/20;
-		object-fit: cover;
+	.empresa > *{
+		box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+		border-radius:4px;
+		padding: 3px;
 	}
 
-	/* -------------------------------------------------------*/
-	/* --------------          Form                 ----------*/
-	/* -------------------------------------------------------*/
+	.card-body p{
+		font-size: 1.5rem;
+		background-color: azure;
+		font-weight: 300;
+	}
+	
+	/* ----------------------------------*/
+	/* ----------     Form     ----------*/
+	/* ----------------------------------*/
 
 	.form {
 		display: grid;
@@ -1211,7 +948,6 @@ table.cursos-costos {
 		background:darkgoldenrod;
 		padding: 1em;
 		max-width: fit-content;
-		
 	}
 	
 	.form  label {
@@ -1220,6 +956,7 @@ table.cursos-costos {
 		font-size: 1.5rem;
 		align-content: center;
 	}  
+	
 	.form  input,
 	.form  textarea,
 	.form  button {
@@ -1229,10 +966,10 @@ table.cursos-costos {
 		padding: 1em 0;
 	}
 
-	/* -------------------------------------------------------*/
-	/* --------------          Form                 ----------*/
-	/* -------------------------------------------------------*/
-	
+	/* ----------------------------------*/
+	/* ----------    Cursos    ----------*/
+	/* ----------------------------------*/
+
 	.cursos {
 		display: flex;
 		align-items: center;
@@ -1250,7 +987,6 @@ table.cursos-costos {
 		padding: 1rem;
 		border: rgb(192, 6, 6) 5px solid;
 		margin: 1rem 1rem;
-		
 	}
 
 	table.cursos-costos {
@@ -1260,9 +996,17 @@ table.cursos-costos {
 		font-weight: 500;
 		text-align: left;
 	}
-
-
 }
+
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@    FIN MEDIA QUERY    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+/*----------------------------------------------------------------------------------------*/
 
 /*////////////////////////////////////////////////////////////////////////////////////////*/
 /************************************ ANIMACIONES *****************************************/
@@ -1280,7 +1024,9 @@ table.cursos-costos {
 	}	
 }
 
-/*///////////////////////B O O K S T R A P///////////////////////*/
+/*////////////////////////////////////////////////////////////////////////////////////////*/
+/************************************ BOOKSTRAP** *****************************************/
+/*////////////////////////////////////////////////////////////////////////////////////////*/
 
 a.nav-link{
 	color: yellow;
@@ -1303,7 +1049,7 @@ span.navbar-toggler-icon{
 }
 
 #carouselExampleSlidesOnly{
-	margin: 2rem 10rem;
+	margin: 2rem 0rem;
 	border: rgb(192, 6, 6) 5px solid;
 
 }
@@ -1314,18 +1060,8 @@ span.navbar-toggler-icon{
 }
 
 #carouselExampleCaptions{
-	margin: 2rem 10rem;
+	margin: 2rem 0rem;
 	border: rgb(192, 6, 6) 5px solid;
-
-}
-
-@media (min-width: 992px)
-{
-	.navbar-expand-lg .navbar-collapse {
-    	display: flex!important;
-    	flex-basis: auto;
-    	justify-content: flex-end;
-	}
 }
 
 .empresa-titulo h1 {
@@ -1342,9 +1078,31 @@ span.navbar-toggler-icon{
 	border: rgb(192, 6, 6) 5px solid;
 }
 
+.card{
+	background-color: black;
+}
 
 .card-body p{
 	font-size: 3rem;
+	background-color: #00bfff;
+	font-weight: 300;
+}
+
+.card-body{
+	color:black;
+}
+
+.card .card-body a{
+	color:white;
+	font-size: 1.5em;
+}
+
+.card .card-body h5{
+	color:white;
+}
+
+.card .card-body h6{
+	color:white;
 }
 
 .empresa-cards{
@@ -1359,12 +1117,12 @@ span.navbar-toggler-icon{
 div .card-body h5{
 	font-size:3rem;
 	align-items: center;
-	color:#005BBB
+	color: black
 }
+
 div .card-body h6{
 	font-size:1rem;
 	color:#005BBB;
-	
 }
 
 #email{
@@ -1391,4 +1149,28 @@ div .card-body h6{
 	align-items: center;
 	justify-content: center;
 	margin: 1rem 1rem;
+}
+
+
+
+@media (min-width: 992px)
+{
+	.navbar-expand-lg .navbar-collapse {
+    	display: flex!important;
+    	flex-basis: auto;
+    	justify-content: flex-end;
+	}
+}
+
+@media (min-width:0) and (max-width:400px){
+	.card .card-body p{
+		font-size: 1rem;
+		/*background-color: #00bfff;*/
+		background-color: azure;
+		font-weight: 300;
+	}
+
+	.carousel-item .carousel-caption p{
+		font-size: 0.5rem;
+	}
 }
