@@ -1,0 +1,18 @@
+header {
+	/*///////////////////////////////////////////////////////////////*/
+	background: linear-gradient(to left, darkblue, rgb(4, 149, 197));
+	/*//////////////////////////////////////////////////////////////*/
+	padding: 1rem;
+	border-bottom: rgb(192, 6, 6) 5px solid;
+	font-family: 'Lato', sans-serif;
+    
+    .header__logo {
+        flex-basis: 40%;
+    }
+}
+
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}

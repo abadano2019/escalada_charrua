@@ -1,0 +1,147 @@
+
+a.nav-link{
+	color: yellow;
+	font-size: 2rem;
+}
+
+img.d-inline-block.align-top {
+    padding: 0 1rem;
+}
+
+span.navbar-toggler-icon{
+	border: 3px solid yellow;
+	width: 3rem;
+	height: 3rem;
+}
+
+#carouselExampleSlidesOnly div img{
+	max-width: 100%;
+	max-height: 80%;
+}
+
+#carouselExampleSlidesOnly{
+	margin: 2rem 0rem;
+	border: rgb(192, 6, 6) 5px solid;
+
+}
+
+#carouselExampleCaptions div img{
+	max-width: 100%;
+	max-height: 80%;
+}
+
+#carouselExampleCaptions{
+	margin: 2rem 0rem;
+	border: rgb(192, 6, 6) 5px solid;
+}
+
+.empresa-titulo h1 {
+	color:yellow;
+}
+
+.cursos-titulo h1 {
+	color: yellow;
+}
+
+.empresa-cards{
+	padding:2rem;
+	margin: 2rem 5rem;
+	border: rgb(192, 6, 6) 5px solid;
+}
+
+.card{
+	background-color: black;
+}
+
+.card-body p{
+	font-size: 3rem;
+	background-color: #00bfff;
+	font-weight: 300;
+}
+
+.card-body{
+	color:black;
+}
+
+.card .card-body a{
+	color:white;
+	font-size: 1.5em;
+}
+
+.card .card-body h5{
+	color:white;
+}
+
+.card .card-body h6{
+	color:white;
+}
+
+.empresa-cards{
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+
+div .card-body h5{
+	font-size:3rem;
+	align-items: center;
+	color: black
+}
+
+div .card-body h6{
+	font-size:1rem;
+	color:#005BBB;
+}
+
+#email{
+	max-height: 2px;
+}
+
+.form div{
+    display: grid;
+	flex-direction: column;
+	align-items: center;
+    grid-template-columns: [labels] auto [controls] auto;
+	grid-auto-flow: row;
+    grid-gap: 0.8em;
+    background:darkgoldenrod;
+    padding: 1em;
+	max-width: fit-content;
+}
+
+.cursos-cards{
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	margin: 1rem 1rem;
+}
+
+
+
+@media (min-width: 992px)
+{
+	.navbar-expand-lg .navbar-collapse {
+    	display: flex!important;
+    	flex-basis: auto;
+    	justify-content: flex-end;
+	}
+}
+
+@media (min-width:0) and (max-width:400px){
+	.card .card-body p{
+		font-size: 1rem;
+		/*background-color: #00bfff;*/
+		background-color: azure;
+		font-weight: 300;
+	}
+
+	.carousel-item .carousel-caption p{
+		font-size: 0.5rem;
+	}
+}

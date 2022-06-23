@@ -1,0 +1,103 @@
+.index-titulo h1 {
+	text-align: center;
+	text-shadow: black 0.1em 0.1em 0.2em;
+	margin: 2rem;
+}
+
+.index-galery {
+	display: grid;
+	grid-auto-flow: column;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	gap: 1rem;
+	padding: 1rem;
+	border: rgb(192, 6, 6) 5px solid;
+	margin-bottom: 5rem;
+}
+
+.index-galery__img {
+	transition: transform .5s;
+}
+
+.index-galery__img:hover{
+	transform: scale(1.05);
+}
+
+.index-galery .index-galery__img:nth-of-type(1) {
+	grid-column: 1/4;
+	animation-name: check-me;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-delay: 2s;
+}
+
+.index-galery .index-galery__img:nth-of-type(2) {
+	grid-column:  4/7;
+	animation-name: check-me;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-delay: 4s;
+}
+
+.index-galery .index-galery__img:nth-of-type(3) {
+	grid-column:  7/10;
+	animation-name: check-me;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-delay: 6s;
+}
+
+.index-galery .index-galery__img:nth-of-type(4) {
+	grid-column:  10/13;
+	animation-name: check-me;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-delay: 8s;
+}
+
+.index-galery .index-galery__img:nth-of-type(5) {
+	grid-column:  1/7;
+	grid-row:2;
+	object-fit: cover;
+}
+
+.index-galery .index-galery__img:nth-of-type(6) {
+	grid-column:  7/13;
+	grid-row:2;
+	object-fit: cover;
+}
+
+.index-galery .index-galery__img:nth-of-type(7) {
+	grid-column:  1/4;
+	grid-row:3;
+	animation-name: check-me;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-delay: 4s;
+}
+
+.index-galery .index-galery__img:nth-of-type(8) {
+	grid-column:  4/10;
+	grid-row:3;
+	object-fit: cover;
+}
+
+.index-galery .index-galery__img:nth-of-type(9) {
+	grid-column:  10/13;
+	grid-row:3;
+	animation-name: check-me;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-delay: 4s;
+}
+
+.index-galery__img {
+	width: 100%;
+	height: auto;
+}

@@ -1,0 +1,69 @@
+
+.empresa-titulo h1 {
+	text-align: center;
+	text-shadow: black 0.1em 0.1em 0.2em;
+	margin: 2rem;
+}
+
+.empresa-formato-subtitulo h2 {
+	max-height: 20px;
+}
+
+.empresa-articulo-0{
+	grid-area: "titulo-articulo-1";
+	padding: 3rem;
+	display: flex;
+	align-items:baseline;
+	justify-content: center;
+}
+
+.empresa-articulo-1{
+	grid-area: "articulo-1";
+}
+
+.empresa-articulo-2{
+	grid-area: "titulo-articulo-2";
+	padding: 3rem;
+	display: flex;
+	align-items:baseline;
+	justify-content: center;
+}
+
+.empresa-articulo-3{
+	grid-area: "articulo-2";
+}
+
+.empresa-articulo-4{
+	grid-area: "titulo-articulo-3";
+	padding: 3rem;
+	display: flex;
+	align-items:baseline;
+	justify-content: center;
+}
+
+.empresa-articulo-5{
+	grid-area: "articulo-3";
+}
+
+.empresa{
+	display:grid;
+	gap: 5px;
+	grid-template-areas:
+		"titulo-articulo-1" auto
+		"articulo-1"		auto
+		"titulo-artiuclo-2" auto
+		"articulo-2"		auto
+		"titulo-articulo-3" auto
+		"articulo-3"		auto /
+		auto;
+	gap: 1em;
+	padding: 5em;
+	border: rgb(192, 6, 6) 5px solid;
+	margin: 5em 5em;
+	align-content: stretch;
+}
+
+.empresa-formato-texto {
+	align-content: center;
+	align-items: flex-start;
+}
