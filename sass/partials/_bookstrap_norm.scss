@@ -43,9 +43,22 @@ span.navbar-toggler-icon{
 	color: yellow;
 }
 
+.empresa{
+	padding:1rem;
+	margin:1rem;
+}
+
+.empresa .empresa-articulo-0, .empresa-articulo-2 h2{
+	padding-bottom: 3rem;
+}
+
+.empresa .empresa-articulo-4 h2{
+	padding-bottom: 5rem;
+}
+
 .empresa-cards{
 	padding:2rem;
-	margin: 2rem 5rem;
+	margin: 2rem 1rem;
 	border: rgb(192, 6, 6) 5px solid;
 }
 
@@ -53,14 +66,14 @@ span.navbar-toggler-icon{
 	background-color: black;
 }
 
-.card-body p{
-	font-size: 3rem;
-	background-color: #00bfff;
-	font-weight: 300;
-}
-
 .card-body{
 	color:black;
+
+	p{
+		font-size: 2.5rem;
+		background-color: rgb(4, 149, 197);
+		font-weight: 300;
+	}
 }
 
 .card .card-body a{
@@ -77,12 +90,13 @@ span.navbar-toggler-icon{
 }
 
 .empresa-cards{
-	display: flex;
+	@include flex(row, space-evenly, 1rem, center, na, wrap);
+	/*display: flex;
 	flex-direction: row;
 	gap: 1rem;
 	flex-wrap: wrap;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-evenly;*/
 }
 
 div .card-body h5{
@@ -93,10 +107,10 @@ div .card-body h5{
 
 div .card-body h6{
 	font-size:1rem;
-	color:#005BBB;
+	color:rgb(4, 149, 197);
 }
 
-#email{
+#email-suscribeme{
 	max-height: 2px;
 }
 
@@ -108,8 +122,18 @@ div .card-body h6{
 	grid-auto-flow: row;
     grid-gap: 0.8em;
     background:darkgoldenrod;
-    padding: 1em;
+    padding: 1rem;
 	max-width: fit-content;
+	max-height: fit-content;
+}
+
+input,
+label,
+button {
+	grid-column: controls;
+	grid-row: auto;
+	border: none;
+	padding: 1em 0;
 }
 
 .cursos-cards{
@@ -118,11 +142,24 @@ div .card-body h6{
 	gap: 1rem;
 	flex-wrap: wrap;
 	align-items: center;
-	justify-content: center;
+	justify-content:space-evenly;
 	margin: 1rem 1rem;
 }
 
-
+.navbar{
+	padding-left: 1rem;
+	padding-right: 1rem;
+	.navbar-nav{
+		gap: 1rem;
+		.nav-link{
+			border: 1px solid darkblue;
+			transition: border 0.8s ease-in-out;
+			&:hover{
+				border-color: yellow;
+			}
+		}
+	}
+}
 
 @media (min-width: 992px)
 {
@@ -131,17 +168,53 @@ div .card-body h6{
     	flex-basis: auto;
     	justify-content: flex-end;
 	}
+
+}
+
+@media (max-width: 991px){
+	.navbar{
+		.navbar-nav{
+			gap:0rem;
+			.nav-link{
+				border: none;
+			}
+		}
+	}
 }
 
 @media (min-width:0) and (max-width:400px){
+	
 	.card .card-body p{
-		font-size: 1rem;
+		font-size: 1,5rem;
 		/*background-color: #00bfff;*/
-		background-color: azure;
+		background-color: rgb(4, 149, 197);
+		font-weight: 300;
+	}
+
+	.card .card-body .card-text p{
+		font-size: 1,5rem;
+		/*background-color: #00bfff;*/
+		background-color: rgb(4, 149, 197);
 		font-weight: 300;
 	}
 
 	.carousel-item .carousel-caption p{
 		font-size: 0.5rem;
 	}
+
+	header nav img {
+        width:65px;
+		height:55px;
+	}
+
+	a.nav-link{
+		font-size: 1.5rem;
+	}
+
+	span.navbar-toggler-icon {
+		border: 2px solid yellow;
+		width: 2rem;
+		height: 2rem;
+	}
+	
 }

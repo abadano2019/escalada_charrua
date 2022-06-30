@@ -1,0 +1,37 @@
+/* Mixins */
+
+/*------------------------------Función flex----------------------------------*/
+/*Función utilizada para asignar flex a un componente en caso de querer utilizar 
+los valores por defecto se debe ingresar na como valor de variable*/
+@mixin flex($direction, $justify, $gap, $align-i, $align-c, $wrap){
+    
+    display: flex;
+    @if $direction == na{flex-direction: column};
+    @if $justify == na{justify-content: flex-start};
+    @if $gap == na{gap: 0};
+    @if $align-i == na{align-items: flex-start};
+    @if $align-c == na{align-content: flex-start;}
+    @if $wrap == na{flex-wrap: nowrap};
+        
+    flex-direction: $direction;
+    justify-content: $justify;
+    gap: $gap;
+    align-items: $align-i;
+    align-content: $align-c;
+    flex-wrap: $wrap;
+}
+
+/*-------------------------Función borderline----------------------------------*/
+/*Función para delinear un borde a un componente parametros $tam corresponde al 
+grosor de la linea  del borde y $color que corresponde al color del borde*/
+@mixin borderline($tam, $color){
+    border:$tam solid $color;
+}
+
+/*-----------------------Función formato texto titulo------------------------*/
+/*Función sin parametros que repite el codigo para el formato sombra de los 
+titulos*/
+@mixin formato_texto_titulo(){
+    text-align: center;
+	text-shadow: black 0.1em 0.1em 0.2em;
+}

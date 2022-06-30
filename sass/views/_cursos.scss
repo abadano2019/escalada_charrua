@@ -6,7 +6,7 @@
 	grid-template-rows: repeat(10, auto);
 	gap: 1rem;
 	padding: 1rem;
-	border: rgb(192, 6, 6) 5px solid;
+	@include borderline(5px, rgb(192, 6, 6));
 	margin: 5rem 5rem;
 	
 }
@@ -18,17 +18,12 @@
 	font-size: 2rem;
 	text-align: center;
 	padding: 2rem;
-
-	text-align: center;
-	text-shadow: black 0.1em 0.1em 0.2em;
+	@include formato_texto_titulo();
 	margin: 2rem;
 }
 
 .cursos {
-	display: flex;
-	align-items: center;
-	align-content: center;
-	flex-direction: column;
+	@include flex(column, na, 0, center,center,na);
 	padding: 0 5rem;
 }
 
@@ -41,7 +36,6 @@ table.cursos-costos {
 }
 
 .cursos-titulo h1 {
-	text-align: center;
-	text-shadow: black 0.1em 0.1em 0.2em;
+	@include formato_texto_titulo();
 	margin: 2rem;
 }

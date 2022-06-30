@@ -8,8 +8,6 @@
 @import 'partials/header';
 @import 'partials/footer';
 @import 'partials/animations';
-@import 'partials/bookstrap_norm';
-@import 'partials/media_query';
 
 /* VIEWS */
 @import 'views/home';
@@ -17,4 +15,9 @@
 @import 'views/cursos';
 @import 'views/galeria';
 @import 'views/contacto';
+
+/* PARTIALS */
+@import 'partials/media_query';
+@import 'partials/bookstrap_norm';
+
 
