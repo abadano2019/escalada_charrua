@@ -4,6 +4,7 @@
 $colors:(
     primary: darkblue,
     secondary: rgb(4, 149, 197),
+    third: rgb(41,41,41),
     alternative: white,
     bg:burlywood,
     alternative-bg: darkgoldenrod,
@@ -15,15 +16,30 @@ $colors:(
 
 /* ///   Spacing   /// */
 $spacings:(
-
+    spacing-xxxlarge: 30rem,
+    spacing-xxylarge: 10rem,
+    spacing-xxlarge: 7rem,
+    spacing-xlarge: 5rem,
+    spacing-large: 3rem,
+    spacing-medium: 2rem,
+    spacing-small: 1.5rem,
+    spacing-xsamll: 1rem,
+    spacing-xxsmall: 0.5
 );
 
 /* ///   font-family   /// */
-$font-family:(
-
-);
+$font-principal: 'Roboto', sans-serif;
+$font-secondary: 'Lato', sans-serif;
+$font-weight-principal: 700;
+$font-weight-secondary: 500;
+$font-weight-third: 300;
+$font-weight-fourth: 100; 
 
 /*   ///   font-sizes   /// */
 $font-size:(
-
+    xlarge: 32px,
+    large: 3rem,
+    medium: 2rem,
+    small: 1.5rem,
+    xsmall: 1rem
 );

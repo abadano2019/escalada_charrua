@@ -1,56 +1,47 @@
 
 .galeria-container__titulo-galeria {
-	font-family: 'Roboto', sans-serif;
-	font-weight: 700;
+	font-family: $font-principal;
+	font-weight: $font-weight-principal;
 }
 
 .galeria-container {
-	padding: 0 5rem 10rem 5rem;
-}
+	padding: 0 map-get($map: $spacings, $key:spacing-xlarge ) map-get($map: $spacings, $key:spacing-xxylarge ) map-get($map: $spacings, $key:spacing-xlarge );
 
-.galeria-container h1 {
-	color:yellow;
-	font-family: 'Roboto', sans-serif;
-	font-weight: 700;
-	/*font-size: 28px;*/
-	text-align: center;
-	padding: 1rem;
-}
+	h1 {
+		color:map-get($map: $colors, $key:primary-text-color);
+		font-family:$font-principal;
+		font-weight:$font-weight-principal;
+		text-align: center;
+		padding: map-get($map: $spacings, $key:spacing-xsmall);
+	}
 
-.galeria-container h2 {
-	color:yellow;
-	font-family: 'Roboto', sans-serif;
-	font-weight: 700;
-	/*font-size: 28px;*/
-	text-align: left;
-	padding: 1rem;
+	h2 {
+		color:map-get($map: $colors, $key:primary-text-color);
+		font-family: $font-principal;
+		font-weight: $font-weight-principal;
+		text-align: left;
+		padding: map-get($map: $spacings, $key:spacing-xsmall );
+	}
 }
 
 .galeria-container-foto__desc h3 {
-	color:black;
-	font-family: 'Roboto', sans-serif;
-	font-weight: 700;
-	/*font-size: 28px;*/
+	color: map-get($map: $colors, $key:secondary-text-color);
+	font-family: $font-principal;
+	font-weight: $font-weight-principal;
 	text-align: left;
-	padding: 1rem;
+	padding: map-get($map: $spacings, $key:spacing-xsmall );
 }
 
 .galery-titulo h1 {
-	text-align: center;
-	text-shadow: black 0.1em 0.1em 0.2em;
-	margin: 2rem;
+	@include formato_texto_titulo(map-get($map: $spacings, $key: spacing-medium)); 
 }
 
 .galery-titulo-top4 h1 {
-	text-align: center;
-	text-shadow: black 0.1em 0.1em 0.2em;
-	margin: 2rem;
+	@include formato_texto_titulo(map-get($map: $spacings, $key: spacing-medium));
 }
 
 .galery-subtitulo-top4 h2 {
-	text-align: center;
-	text-shadow: black 0.1em 0.1em 0.2em;
-	margin: 2rem;
+	@include formato_texto_titulo(map-get($map: $spacings, $key: spacing-medium));
 }
 
 .galery .img-h {
@@ -65,31 +56,26 @@
 
 .img-h{
 	transition: transform .5s;
-}
-
-.img-h:hover{
-	transform: scale(1.02);
+	&:hover{
+		transform: scale(1.02);
+	}
 }
 
 .img-v{
 	transition: transform .5s;
-}
-
-.img-v:hover{
-	transform: scale(1.02);
+	&:hover{
+		transform: scale(1.02);
+	}
 }
 
 .card-1 {
-	display: flex;
-	flex-direction: row;
-	align-content:center;
-	justify-content: flex-start;
-
+	@include flex(row, flex-start, na, na, center, na);
+	padding: map-get($map: $spacings, $key: spacing-xsamll);
 }
 
 .card-1__description {
 	max-width: 200px;
-	padding: 3rem;
+	padding: map-get($map: $spacings, $key:spacing-large);
 }
 
 .card-1__detalle {
@@ -97,15 +83,13 @@
 }
 
 .card-2 {
-	display: flex;
-	flex-direction: row;
-	align-content:center;
-	justify-content: flex-start;
+	@include flex(row, flex-start, na, na, center, na);
+	padding: map-get($map: $spacings, $key: spacing-xsamll);
 }
 
 .card-2__description {
 	max-width: 200px;
-	padding: 3rem;
+	padding: map-get($map: $spacings, $key: spacing-large);
 }
 
 .card-2__detalle {
@@ -113,15 +97,13 @@
 }
 
 .card-3 {
-	display: flex;
-	flex-direction: column;
-	align-content: center;
-	justify-content: center;
+	@include flex(column, center, na, na, center, na);
+	padding: map-get($map: $spacings, $key: spacing-xsamll);
 }
 
 .card-3__description {
 	max-height: 400px;
-	padding: 3rem;
+	padding: map-get($map: $spacings, $key: spacing-large);
 }
 
 .card-3__detalle {
@@ -129,16 +111,13 @@
 }
 
 .card-4 {
-	display: flex;
-	flex-direction: column;
-	align-content: center;
-	justify-content: center;
-
+	@include flex(column, center, na, na, center, na);
+	padding: map-get($map: $spacings, $key: spacing-xsamll);
 }
 
 .card-4__description {
 	max-height: 400px;
-	padding: 3rem;
+	padding: map-get($map: $spacings, $key:spacing-large);
 }
 
 .card-4__detalle {
@@ -150,10 +129,11 @@
 	grid-auto-flow:column;
 	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: repeat(2, 1fr);
-	gap: 1rem;
-	padding: 1rem;
-	border: rgb(192, 6, 6) 5px solid;
-	margin-bottom: 5rem;
+	gap: map-get($map: $spacings, $key:spacing-xsmall);
+	padding: map-get($map: $spacings, $key:spacing-xsmall);
+	$line-color: map-get($map: $colors, $key:borderline); 
+	@include borderline(5px, $line-color);
+	margin-bottom: map-get($map: $spacings, $key:spacing-xlarge);
 	align-content: stretch;
 }
 

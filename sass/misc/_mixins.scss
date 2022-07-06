@@ -31,7 +31,18 @@ grosor de la linea  del borde y $color que corresponde al color del borde*/
 /*-----------------------Función formato texto titulo------------------------*/
 /*Función sin parametros que repite el codigo para el formato sombra de los 
 titulos*/
-@mixin formato_texto_titulo(){
+@mixin formato_texto_titulo($margin){
     text-align: center;
 	text-shadow: black 0.1em 0.1em 0.2em;
+    margin:$margin;
+}
+
+/*--------------------Animación para la pagina de home----------------------------*/
+/*Función para ejecutar animación sobre fotos de la galería de la pagina de inicio*/ 
+@mixin animacion_home($name, $duration, $iteration-count,$timing-function,$delay){
+    animation-name: $name;
+	animation-duration: $duration;
+	animation-iteration-count: $iteration-count;
+	animation-timing-function: $timing-function;
+	animation-delay: $delay;
 }

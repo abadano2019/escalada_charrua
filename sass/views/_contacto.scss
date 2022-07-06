@@ -1,44 +1,37 @@
 
 .form-container__titulo-contacto {
-	font-family: 'Roboto', sans-serif;
-	font-weight: 700;
+	font-family: $font-principal;
+	font-weight: $font-weight-principal;
 }
 
 .form-container {
-	padding: 5rem 30rem;
-	/*color:yellow;*/
+	padding: map-get($map: $spacings, $key:spacing-xlarge) map-get($map: $spacings, $key:spacing-xxxlarge);
 	color:map-get($map: $colors, $key:primary-text-color );
-	font-family: 'Roboto', sans-serif;
-	font-weight: 500;
-	font-size: 2.5rem;
+	font-family: $font-principal;
+	font-weight: $font-weight-secondary;
+	font-size: map-get($map: $spacings, $key:spacing-medium);
 	text-align: left;
-	padding: 5rem;	
-	margin: 0 5rem;
-	display: flex;
-	align-content: center;
-	flex-direction: column;
-	align-items: center;
-
+	padding: map-get($map: $spacings, $key:spacing-xlarge);
+	margin: 0 map-get($map: $spacings, $key:spacing-xlarge);
+	@include flex(column, na, na, center, center, na);
+	
 	h1 {
-		/*color:yellow;*/
 		color: map-get($map: $colors, $key:primary-text-color );
-		font-family: 'Roboto', sans-serif;
-		font-weight: 700;
+		font-family: $font-principal;
+		font-weight: $font-weight-principal;
 		text-align: center;
-		padding: 1rem;
-		text-align: center;
-		text-shadow: black 0.1em 0.1em 0.2em;
-		margin: 2rem;
+		padding: map-get($map: $spacings, $key:spacing-xsmall);
+		@include formato_texto_titulo(map-get($map: $spacings, $key:spacing-medium));
 	}
 }
 
 .form__btn{
 	text-decoration:none;
-	font-weight:700;
+	font-weight: $font-weight-principal;
 	font-size:20px;
 	color: map-get($map: $colors, $key: primary-text-color);
-	padding-top:15px;
-	padding-bottom:15px;
+	padding-top:10px;
+	padding-bottom:10px;
 	background-color: map-get($map: $colors, $key:boton-color );
 }
 
@@ -59,14 +52,14 @@
 }
 
 .form {
-    display: grid;
+	display: grid;
 	flex-direction: column;
 	align-items: center;
     grid-template-columns: [labels] auto [controls] auto;
 	grid-auto-flow: row;
     grid-gap: 0.8em;
-    background: map-get($map: $colors, $key:alternative-bg );
-	padding: 1rem;
+    background: map-get($map: $colors, $key:alternative-bg);
+	padding: map-get($map: $spacings, $key:spacing-xsamll);
 	max-width: fit-content;
 	max-height: fit-content;
 
@@ -81,7 +74,7 @@
     	grid-column: controls;
     	grid-row: auto;
     	border: none;
-    	padding: 1em 0;
+    	padding: 0.5em 0;
 	}
 
 	#nombre,

@@ -1,10 +1,13 @@
 header {
 	/*///////////////////////////////////////////////////////////////*/
-	background: linear-gradient(to left, darkblue, rgb(4, 149, 197));
+	$start-color: map-get($map: $colors, $key:primary );
+	$end-color:map-get($map: $colors, $key:secondary );
+	background: linear-gradient(to left, $start-color, $end-color);
 	/*//////////////////////////////////////////////////////////////*/
-	padding: 1rem;
-	border-bottom: rgb(192, 6, 6) 5px solid;
-	font-family: 'Lato', sans-serif;
+	padding: map-get($map: $spacings, $key:spacing-xsamll );
+	$border-bottomline: map-get($map: $colors, $key:borderline);
+	border-bottom: $border-bottomline 5px solid;
+	font-family: $font-secondary;
     
     .header__logo {
         flex-basis: 40%;

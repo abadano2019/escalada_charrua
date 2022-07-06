@@ -1,45 +1,35 @@
 footer {
-	background-color:darkblue;
-	padding:0.5rem;
-	font-family: 'Lato', sans-serif;
-	border-top: rgb(192, 6, 6) 5px solid;
+    background-color:map-get($map: $colors, $key: primary);
+	padding: map-get($map: $spacings, $key: spacing-xxsmall );
+	font-family: $font-secondary;
+    $border-topline: map-get($map: $colors, $key:borderline);
+	border-top: $border-topline 5px solid;
 	height: 12rem;
 
     .footer-container {
-        display: flex;
-        flex-direction: row;
-        align-content: center;
-        justify-content: center;
+        @include flex(row, center, na, center, center, na);
         height: 100px;
-        margin: 0 5rem;
+        margin: 0 map-get($map: $spacings, $key: spacing-xlarge);
     }
     
     .footer-right {
         width: 75%;
-        display: flex;
+        @include flex(row, flex-end, na, center, center, wrap);
         float:right;
-        align-items: center;
-        align-content: center;
-        justify-content: flex-end;
-        flex-wrap: wrap;
     }
     
     .footer-left {
         width: 25%;
-        display: flex;
+        @include flex(column, center, na, flex-start, na, wrap);
         float: left;
-        align-items: flex-start;
         padding: 0 0;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: center;
     }
     
     .footer-right__img {
         display:flex;
         flex-basis: 1%;
         align-items:flex-end;
-        padding: 1rem;
+        padding: map-get($map: $spacings, $key: spacing-xsamll );
     }
    
 }

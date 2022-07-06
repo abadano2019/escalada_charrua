@@ -1,8 +1,6 @@
 
 .empresa-titulo h1 {
-	text-align: center;
-	text-shadow: black 0.1em 0.1em 0.2em;
-	margin: 2rem;
+	@include formato_texto_titulo(map-get($map: $spacings, $key: spacing-medium));
 }
 
 .empresa-formato-subtitulo h2 {
@@ -11,10 +9,8 @@
 
 .empresa-articulo-0{
 	grid-area: "titulo-articulo-1";
-	padding: 3rem;
-	display: flex;
-	align-items:baseline;
-	justify-content: center;
+	padding: map-get($map: $spacings, $key: spacing-large);
+	@include flex(na, center, na, stretch, center, na);
 }
 
 .empresa-articulo-1{
@@ -23,10 +19,8 @@
 
 .empresa-articulo-2{
 	grid-area: "titulo-articulo-2";
-	padding: 3rem;
-	display: flex;
-	align-items:baseline;
-	justify-content: center;
+	padding: map-get($map: $spacings, $key: spacing-large);
+	@include flex(na, center, na, stretch, center, na);
 }
 
 .empresa-articulo-3{
@@ -35,10 +29,8 @@
 
 .empresa-articulo-4{
 	grid-area: "titulo-articulo-3";
-	padding: 3rem;
-	display: flex;
-	align-items:baseline;
-	justify-content: center;
+	padding: map-get($map: $spacings, $key: spacing-large);
+	@include flex(na, center, na, stretch, center, na);
 }
 
 .empresa-articulo-5{
@@ -58,7 +50,8 @@
 		auto;
 	gap: 1em;
 	padding: 5em;
-	border: rgb(192, 6, 6) 5px solid;
+	$line-color:map-get($map: $colors, $key:borderline);
+	@include borderline(5px, $line-color);
 	margin: 5em 5em;
 	align-content: stretch;
 }
