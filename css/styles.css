@@ -833,7 +833,7 @@ label {
   /* ----------     Form     ----------*/
   /* ----------------------------------*/
   #contact-form .image {
-    background-image: url("../../img/contacto-2.jpg"); } }
+    background-image: url("../"); } }
 
 /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@    Breakpint 500px  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
 @media screen and (max-width: 500px) {
