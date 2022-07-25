@@ -1,3 +1,6 @@
+/*  ///////////////////////////////////////////////////////////////////////  */
+/*      Ajustes realizados sobre los componentes de boostrap utilizados      */
+/*  ///////////////////////////////////////////////////////////////////////  */
 
 a.nav-link{
 	color:map-get($map: $colors, $key: primary-text-color);
@@ -10,7 +13,7 @@ img.d-inline-block.align-top {
 
 span.navbar-toggler-icon{
 	$line-color: map-get($map: $colors, $key:primary-text-color );
-	@include borderline(3px,$line-color);
+	@include borderline($xlarge, $line-color);
 	width: map-get($map: $spacings, $key: spacing-large);
 	height: map-get($map: $spacings, $key: spacing-large);
 }
@@ -18,7 +21,7 @@ span.navbar-toggler-icon{
 #carouselExampleSlidesOnly{
 	margin: map-get($map: $spacings, $key: spacing-medium) 0rem;
 	$line-color: map-get($map: $colors, $key:borderline );
-	@include borderline(5px, $line-color);
+	@include borderline($xlarge, $line-color);
 
 	div{
 		img{
@@ -31,7 +34,7 @@ span.navbar-toggler-icon{
 #carouselExampleCaptions{
 	margin: map-get($map: $spacings, $key: spacing-medium) 0rem;
 	$line-color: map-get($map: $colors, $key:borderline );
-	@include borderline(5px, $line-color);
+	@include borderline($xlarge, $line-color);
 
 	div{
 		img{
@@ -50,8 +53,8 @@ span.navbar-toggler-icon{
 }
 
 .empresa{
-	padding: map-get($map: $spacings, $key: spacing-xsamll);
-	margin: map-get($map: $spacings, $key: spacing-xsamll);
+	padding: map-get($map: $spacings, $key: spacing-xsmall);
+	margin: map-get($map: $spacings, $key: spacing-xsmall);
 }
 
 .empresa .empresa-articulo-0, .empresa-articulo-2 h2{
@@ -64,10 +67,10 @@ span.navbar-toggler-icon{
 
 .empresa-cards{
 	padding: map-get($map: $spacings, $key: spacing-medium);
-	margin: map-get($map: $spacings, $key: spacing-medium) map-get($map: $spacings, $key: spacing-xsamll);
+	margin: map-get($map: $spacings, $key: spacing-medium) map-get($map: $spacings, $key: spacing-xsmall);
 	$line-color: map-get($map: $colors, $key:borderline );
-	@include borderline(5px, $line-color);
-	@include flex(row, space-evenly, 1rem, center, na, wrap);
+	@include borderline($xlarge, $line-color);
+	@include flex(row, space-evenly, map-get($map:$spacings, $key: spacing-xsmall), center, na, wrap);
 }
 
 .card{
@@ -79,12 +82,12 @@ span.navbar-toggler-icon{
 		p{
 			font-size: map-get($map: $spacings, $key: spacing-medium);
 			background-color:map-get($map: $colors, $key:secondary);
-			font-weight: 300;
+			font-weight: $font-weight-third;
 		}
 
 		a{
 			color:map-get($map: $colors, $key: alternative);
-			font-size: 1.5em;
+			font-size: $ems-small;
 		}
 
 		h5{
@@ -95,7 +98,6 @@ span.navbar-toggler-icon{
 			color:map-get($map: $colors, $key: alternative);
 		}
 	}
-
 }
 
 div .card-body{
@@ -106,13 +108,13 @@ div .card-body{
 	}
 
 	h6{
-		font-size: map-get($map: $spacings, $key: spacing-xsamll);
+		font-size: map-get($map: $spacings, $key: spacing-xsmall);
 		color:map-get($map: $colors, $key:secondary);
 	}
 } 
 
 #email-suscribeme{
-	max-height: 2px;
+	max-height: map-get($map: $spacings, $key: spacing-medium );
 }
 
 .form div{
@@ -121,35 +123,26 @@ div .card-body{
 	align-items: center;
     grid-template-columns: [labels] auto [controls] auto;
 	grid-auto-flow: row;
-    grid-gap: 0.8em;
+    grid-gap: $spacings-ems-xxsmall;
     background:map-get($map: $colors, $key:bg );
-    padding: map-get($map: $spacings, $key: spacing-xsamll);
+    padding: map-get($map: $spacings, $key: spacing-xsmall);
 	max-width: fit-content;
 	max-height: fit-content;
 }
 
-input,
-label,
-button {
-	grid-column: controls;
-	grid-row: auto;
-	border: none;
-	padding: 1em 0;
-}
-
 .cursos-cards{
-	@include flex(row, space-evenly, map-get($map: $spacings, $key:spacing-xsamll), center, na, wrap);
-	margin: map-get($map: $spacings, $key:spacing-xsamll) map-get($map: $spacings, $key:spacing-xsamll);
+	@include flex(row, space-evenly, map-get($map: $spacings, $key:spacing-xsmall), center, na, wrap);
+	margin: map-get($map: $spacings, $key:spacing-xsmall) map-get($map: $spacings, $key:spacing-xsmall);
 }
 
 .navbar{
-	padding-left: map-get($map: $spacings, $key:spacing-xsamll);
-	padding-right: map-get($map: $spacings, $key:spacing-xsamll);
+	padding-left: map-get($map: $spacings, $key:spacing-xsmall);
+	padding-right: map-get($map: $spacings, $key:spacing-xsmall);
 	.navbar-nav{
-		gap: map-get($map: $spacings, $key:spacing-xsamll);;
+		gap: map-get($map: $spacings, $key:spacing-xsmall);;
 		.nav-link{
 			$line-color: map-get($map: $colors, $key:primary );
-			@include borderline(1px,$line-color);
+			@include borderline($small, $line-color);
 			transition: border 0.8s ease-in-out;
 			&:hover{
 				border-color:map-get($map: $colors, $key:primary-text-color);
@@ -157,6 +150,11 @@ button {
 		}
 	}
 }
+
+/*  /////////////////////////////////////////////////////////////  */
+/* Ajustes realizados sobre los componentes de boostrap utilizados */
+/*                    Para las Media Query                         */
+/*  /////////////////////////////////////////////////////////////  */
 
 @media (min-width: 992px){
 	.navbar-expand-lg .navbar-collapse {
@@ -167,6 +165,8 @@ button {
 	}
 
 }
+
+/*////////////////////////////////////////////////////////////////////////////*/
 
 @media (max-width: 991px){
 	.navbar{
@@ -179,6 +179,8 @@ button {
 	}
 }
 
+/*////////////////////////////////////////////////////////////////////////////*/
+
 @media (min-width:0) and (max-width:400px){
 	
 	.card .card-body p,
@@ -190,10 +192,10 @@ button {
 	}
 
 	.carousel-item .carousel-caption p{
-		font-size: map-get($map: $spacings, $key:spacing-xsamll);
+		font-size: map-get($map: $spacings, $key:spacing-xsmall);
 	}
 
-	header nav img {
+	header nav img{
         width:65px;
 		height:55px;
 	}
@@ -204,9 +206,8 @@ button {
 
 	span.navbar-toggler-icon {
 		$line-color: map-get($map: $colors, $key:primary-text-color );
-		@include borderline(2px,$line-color);
+		@include borderline($small,$line-color);
 		width: map-get($map: $spacings, $key:spacing-medium);
 		height: map-get($map: $spacings, $key:spacing-medium);
 	}
-	
 }

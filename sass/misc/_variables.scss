@@ -1,4 +1,6 @@
-/* Variales */
+/* ---------------------- -------- ---------------------- */
+/* ---------------------- Variales ---------------------- */
+/* ---------------------- -------- ---------------------- */
 
 /* ///   Colors   /// */
 $colors:(
@@ -23,9 +25,16 @@ $spacings:(
     spacing-large: 3rem,
     spacing-medium: 2rem,
     spacing-small: 1.5rem,
-    spacing-xsamll: 1rem,
-    spacing-xxsmall: 0.5
+    spacing-xsmall: 1rem,
+    spacing-xxsmall: 0.5rem
 );
+
+/* ///   pixeles   /// */
+$xxxlarge: 35px;
+$xxlarge: 20px;
+$xlarge: 5px;
+$small: 2px;
+
 
 /* ///   font-family   /// */
 $font-principal: 'Roboto', sans-serif;
@@ -38,8 +47,27 @@ $font-weight-fourth: 100;
 /*   ///   font-sizes   /// */
 $font-size:(
     xlarge: 32px,
+    xxlarge: 20px,
+    xylarge: 18px,
+    ylarge: 15px,
     large: 3rem,
     medium: 2rem,
     small: 1.5rem,
     xsmall: 1rem
 );
+
+/*   ///   spacing-sizes en ems  /// */
+$spacings-ems-xxsmall: 0.8em;
+
+/*   ///   font-sizes en ems  /// */
+$ems-xlarge: 5em;
+$ems-small: 1.5em;
+$ems-xsmall: 1em;
+
+/* /// Otras Variables  /// */
+$footer-height: 12rem;
+$container-footer-height: 100px;
+$container-footer-height-media-query: 120px;
+$padding-top-bottom-btn: 10px;
+$height-form-contact: 500px;
+$min-width-form-contact: 250px;

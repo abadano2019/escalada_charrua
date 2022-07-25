@@ -19,10 +19,10 @@
 		grid-auto-flow:column;
 		grid-template-columns: repeat(12, 1fr);
 		grid-template-rows: repeat(4, 1fr);
-		gap: map-get($map: $spacings, $key:spacing-xsamll);
-		padding: map-get($map: $spacings, $key:spacing-xsamll);
+		gap: map-get($map: $spacings, $key:spacing-xsmall);
+		padding: map-get($map: $spacings, $key:spacing-xsmall);
 		$line-color: map-get($map: $colors, $key:borderline);
-		@include borderline(5px, $line-color);
+		@include borderline($xlarge, $line-color);
 		margin-bottom: map-get($map: $spacings, $key:spacing-xlarge);
 		align-content: stretch;
 	}
@@ -63,6 +63,29 @@
 		object-fit: cover;
 	}
 
+	.formato-cursos-a{
+		text-align: left;
+		display:flex;
+		flex-direction: column;
+		gap:map-get($map: $spacings, $key: spacing-xsamll);
+		align-items: center;
+	}
+	
+	.formato-cursos-b{
+		text-align: left;
+		display:flex;
+		flex-direction: column;
+		gap:map-get($map: $spacings, $key: spacing-xsamll);
+		align-items: center;
+	}
+
+	picture.curso-imagen-0,
+	picture.curso-imagen-1,
+	picture.curso-imagen-2,
+	picture.curso-imagen-3{
+		width: 50%;
+	}
+
 }
 /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@    Breakpint 650px  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
 
@@ -77,8 +100,8 @@
 		grid-auto-flow: column;
 		grid-template-columns: repeat(12, 1fr);
 		grid-template-rows: repeat(7, auto);
-		gap: map-get($map: $spacings, $key:spacing-xsamll);
-		padding: map-get($map: $spacings, $key:spacing-xsamll);
+		gap: map-get($map: $spacings, $key:spacing-xsmall);
+		padding: map-get($map: $spacings, $key:spacing-xsmall);
 		$line-color: map-get($map: $colors, $key: borderline );
 		@include borderline(5px,$line-color);
 		margin-bottom: map-get($map: $spacings, $key:spacing-xlarge);
@@ -153,9 +176,16 @@
 	}
 
 	.carousel-item .carousel-caption p{
-		font-size: map-get($map: $spacings, $key:spacing-medium);
+		font-size: map-get($map: $font-size, $key:medium);
 	}
 
+	/* ----------------------------------*/
+	/* ----------     Form     ----------*/
+	/* ----------------------------------*/
+
+	#contact-form .image{
+		background-image: url("/img/contacto-2.jpg");
+	}
 }
 
 /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@    Breakpint 500px  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
@@ -167,19 +197,19 @@
 	}
 	
 	h1{
-		font-size: 16px;
+		font-size: map-get($map: $font-size, $key: xylarge);
 	}
 
 	.galery-subtitulo-1 h2 {
-		font-size: map-get($map: $spacings, $key:spacing-medium);
+		font-size: map-get($map: $font-size, $key:medium);
 	}
 
 	.galery-subtitulo-top4 h2{
-		font-size: map-get($map: $spacings, $key:spacing-medium);
+		font-size: map-get($map: $font-size, $key:medium);
 	}
 
 	.empresa-formato-subtitulo h2 {
-		font-size: map-get($map: $spacings, $key:spacing-medium);
+		font-size: map-get($map: $font-size, $key:medium);
 	}
 
 	footer{
@@ -187,20 +217,23 @@
 		
 		.footer-container {
 			flex-wrap: wrap;
-			height: 120px;
-			margin: 0 map-get($map: $spacings, $key:spacing-xsamll);
+			height: $container-footer-height-media-query;
+			margin: 0 map-get($map: $spacings, $key:spacing-xsmall);
 		}
 
 		.footer-left{
 			align-items: strech;
 			align-content: flex-end;
-
 		}
 
 		.footer-right {
 			width: 75%;
 			@include flex(row, center, na, center, center, wrap);
 			float:right;
+		}
+
+		img.footer-right__img{
+			width: 25%;
 		}
 	}	
 	/* ----------------------------------*/
@@ -214,40 +247,50 @@
 	}
 
 	.card-body p{
-		font-size: map-get($map: $spacings, $key:spacing-small);
+		font-size: map-get($map: $font-size, $key:small);
 		background-color: map-get($map: $colors, $key:alternative );
-		font-weight: 300;
+		font-weight: $font-weight-third;
 	}
 	
 	/* ----------------------------------*/
 	/* ----------     Form     ----------*/
 	/* ----------------------------------*/
 
-	.form {
-		display: grid;
-		flex-direction: row;
-		grid-template-columns: [labels] 50px [controls] 100px;
-		grid-auto-flow: row;
-		grid-gap: 0.8em;
-		background:map-get($map: $colors, $key:alternative-bg );
-		padding: 1em;
-		max-width: fit-content;
+	#contact-form .image{
+		display:none;
+	}
 
-		label {
-			grid-column: labels;
-			grid-row: auto;
-			font-size: map-get($map: $spacings, $key:spacing-small);
-			align-content: center;
-		}
+	.form__btn{
+		text-decoration:none;
+		font-weight: $font-weight-principal;
+		font-size:map-get($map: $font-size, $key: ylarge );
+		color: map-get($map: $colors, $key: primary-text-color);
+		margin: map-get($map: $spacings, $key:spacing-xsmall) 0;
+		background-color: map-get($map: $colors, $key:boton-color );
+	}
 
-		input,
-		textarea,
-		button {
-			grid-column: controls;
-			grid-row: auto;
-			border: none;
-			padding: map-get($map: $spacings, $key:spacing-xsamll) 0;
-		}
+	#contact-form .frm{
+		width: 100%;
+	}
+
+	#contact-form .btn{
+		width: 100%;
+		margin-top: $xxlarge;
+	}
+
+	#contact-form .frm{
+		height: $height-form-contact;
+		width: 100%;
+		min-width: $min-width-form-contact;
+		padding: 0 $xxxlarge;
+		margin: $xxlarge;
+		background-size: 100% 100%;
+		background-color: map-get($map: $colors, $key: alternative);
+	}
+
+	label{
+		font-size: map-get($map: $font-size, $key:ylarge);
+		font-weight: $font-weight-secondary;
 	}
 	
 	/* ----------------------------------*/
@@ -256,7 +299,7 @@
 
 	.cursos {
 		@include flex(column, na, na, center, center, na);
-		padding: 0rem map-get($map: $spacings, $key:spacing-xsamll);
+		padding: 0rem map-get($map: $spacings, $key:spacing-xsmall);
 	}
 
 	.cursos-descripcion {
@@ -264,27 +307,33 @@
 		grid-auto-flow: column;
 		grid-template-columns: repeat(1, 1fr);
 		grid-template-rows: repeat(10, auto);
-		gap: map-get($map: $spacings, $key:spacing-xsamll);
-		padding: map-get($map: $spacings, $key:spacing-xsamll);
+		gap: map-get($map: $spacings, $key:spacing-xsmall);
+		padding: map-get($map: $spacings, $key:spacing-xsmall);
 		$color-borderline: map-get($map: $colors, $key: borderline);
-		@include borderline(5px, $color-borderline);
-		margin: map-get($map: $spacings, $key:spacing-xsamll) map-get($map: $spacings, $key:spacing-xsamll);
+		@include borderline($xlarge, $color-borderline);
+		margin: map-get($map: $spacings, $key:spacing-xsmall) map-get($map: $spacings, $key:spacing-xsmall);
 	}
 
 	table.cursos-costos {
 		color:map-get($map: $colors, $key:third );
-		font-size: map-get($map: $spacings, $key:spacing-xsamll);
+		font-size: map-get($map: $font-size, $key:xsmall);
 		font-family: 'Roboto', sans-serif;
-		font-weight: 500;
+		font-weight: $font-weight-secondary;
 		text-align: left;
 	}
 
 	.carousel-item .carousel-caption p{
-		font-size: map-get($map: $spacings, $key:spacing-medium);
+		font-size: map-get($map: $font-size, $key:medium);
 	}
 
 	.form__btn{
-		padding-top:10px;
-		padding-bottom:10px;
+		padding-top:$padding-top-bottom-btn 0;
+	}
+
+	picture.curso-imagen-0,
+	picture.curso-imagen-1,
+	picture.curso-imagen-2,
+	picture.curso-imagen-3{
+		width: 80%;
 	}
 }

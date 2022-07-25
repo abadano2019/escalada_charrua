@@ -39,7 +39,7 @@
 
 .empresa{
 	display:grid;
-	gap: 5px;
+	gap: $xlarge;
 	grid-template-areas:
 		"titulo-articulo-1" auto
 		"articulo-1"		auto
@@ -48,15 +48,14 @@
 		"titulo-articulo-3" auto
 		"articulo-3"		auto /
 		auto;
-	gap: 1em;
-	padding: 5em;
+	gap: $ems-xsmall;
+	padding: $ems-xlarge;
 	$line-color:map-get($map: $colors, $key:borderline);
 	@include borderline(5px, $line-color);
-	margin: 5em 5em;
+	margin: $ems-xlarge $ems-xlarge;
 	align-content: stretch;
 }
 
 .empresa-formato-texto {
-	align-content: center;
-	align-items: flex-start;
+	text-align: justify;
 }

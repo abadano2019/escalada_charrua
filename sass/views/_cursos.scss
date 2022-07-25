@@ -3,8 +3,8 @@
 	grid-auto-flow: column;
 	grid-template-columns: repeat(1, 1fr);
 	grid-template-rows: repeat(10, auto);
-	gap: map-get($map: $spacings, $key: spacing-xsamll);
-	padding: map-get($map: $spacings, $key: spacing-xsamll);
+	gap: map-get($map: $spacings, $key: spacing-xsmall);
+	padding: map-get($map: $spacings, $key: spacing-xsmall);
 	$line-color: map-get($map: $colors, $key:borderline);
 	@include borderline(5px, $line-color);
 	margin: map-get($map: $spacings, $key: spacing-xlarge) map-get($map: $spacings, $key: spacing-xlarge);
@@ -18,15 +18,14 @@
 		padding: map-get($map: $spacings, $key: spacing-medium);
 		@include formato_texto_titulo(map-get($map: $spacings, $key: spacing-medium));
 	}
-	
 }
 
-.cursos {
+.cursos{
 	@include flex(column, na, 0, center,center,na);
 	padding: 0 map-get($map: $spacings, $key: spacing-xlarge);;
 }
 
-table.cursos-costos {
+table.cursos-costos{
 	color:map-get($map: $colors, $key: third);
 	font-size: map-get($map: $spacings, $key: spacing-small);
 	font-family: $font-principal;
@@ -34,6 +33,51 @@ table.cursos-costos {
 	text-align: left;
 }
 
-.cursos-titulo h1 {
+.cursos-titulo h1{
 	@include formato_texto_titulo(map-get($map: $spacings, $key: spacing-medium));
+}
+
+.curso-contenedor{
+	display:flex;
+	flex-direction: column;
+}
+
+.curso-imagen-0{
+	width: 70%;
+}
+
+.curso-imagen-1{
+	width: 100%
+}
+
+.curso-imagen-2{
+	width: 120%
+}
+
+.curso-imagen-3{
+	width: 150%
+}
+
+.formato-cursos-a{
+	@include flex(row, na, na, na, na, na);
+	text-align: left;
+	gap:map-get($map: $spacings, $key: spacing-xsmall);
+}
+
+.formato-cursos-b{
+	@include flex(row-reverse, na, na, left, na, na);
+	text-align: left;
+	gap:map-get($map: $spacings, $key: spacing-xsmall);
+}
+
+.formato-texto-curso{
+	@include flex(column, na, na, na, na, na);
+	gap:map-get($map: $spacings, $key: spacing-large);
+	text-align: justify;
+}
+
+.mas-info-curso{
+	font-size: map-get($map: $spacings, $key: spacing-small );
+	font-weight: $font-weight-principal;
+	color: map-get($map: $colors, $key:borderline );
 }

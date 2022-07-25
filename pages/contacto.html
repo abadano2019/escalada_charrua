@@ -10,65 +10,70 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/styles.css">
 </head>
-<body class="body-background-none">
+<body class="body-background-contacto">
     <!-- INICIO DE HEADER-->
     <header>
+        <!-- ---------------------------------BOOKSTRAP -------------------------------------------- -->
         <nav class="navbar navbar-expand-lg navbar-light" style="background-color: darkblue">
             <a class="navbar-brand" href="#">
                 <img src="../img/logo.jpg" width="50" height="100" class="d-inline-block align-top" alt="Logo del club">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
-                <li class="nav-item active">
-                  <a class="nav-link" href="../index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="empresa.html">Empresa</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="cursos.html">Cursos</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="galeria.html">Galeria</a> <!--<span class="sr-only">(current)</span></a></a>-->
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="contacto.html">Contacto</a>
-                </li>
-              </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="empresa.html">Empresa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cursos.html">Cursos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="galeria.html">Galeria</a> <!--<span class="sr-only">(current)</span></a></a>-->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
             </div>
-          </nav>
+        </nav>
+        <!-- ---------------------------------BOOKSTRAP -------------------------------------------- -->
     </header>
     <!-- FIN DE HEADER-->
     <!-- INICIO DE MAIN-->
     <main>
     <!-- FORMULARIO DE CONTACTO-->
-        <section id="form-contacto">
-            <article class="form-container">
-                <h1 class="form-container__titulo-contacto">FORMULARIO DE CONTACTO</h1>
-                <form class="form" action="" method = GET enctype="text/plain">
-                    <label for="nombre">Nombres: </label>
-                    <input type="text" name="nombre" id="nombre" required>
-                    <label for="apellido">Apellidos: </label>
-                    <input type="text" name="apellido" id="apellido" required>
-                    <label for="email">Email: </label>
-                    <input type="email" name="email" id="email" required>
-                    <label for="comments">Mensaje:</label>
-                    <textarea name="comments" id="comments" maxlength="500"></textarea>
-                    <button class="form__btn--submit">Enviar</button>
-                    <input class="form__btn--clear" type="reset" value="Borrar">
-                </form>
-            </article>
-        </section>
-        <section>
-            <article class="form-container">
-                <h1 class="form-container__titulo-contacto">SUSCRIBETE</h1>
-                <form class="form">
-                    <label for="email-suscribeme">Email: </label>
-                    <input type="email-suscribeme" name="email-suscribeme" id="email-suscribeme" required>
-                    <button type="submit" class="form__btn">OK</button>
+        <section class="form-contacto">
+            <h1 class="form-container__titulo-contacto">FORMULARIO DE CONTACTO</h1>
+            <article class="container" id= "contact-form">
+                <div class="image"></div>
+                <form class="frm" action="" method = GET enctype="text/plain">
+                    <div class="form-group">
+                        <label for="nombre">Nombres: </label>
+                        <input type="text" class="form-control" name="nombre" id="nombre" required placeholder="Ingrese sus nombres">
+                    </div>
+                    <div class="form-group">
+                        <label for="apellido">Apellidos: </label>
+                        <input type="text" class="form-control" name="apellido" id="apellido" required placeholder="Ingrese sus apellidos">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email: </label>
+                        <input type="email" class="form-control" name="email" id="email" required placeholder="Ingrese email de contacto">
+                    </div>
+                    <div class="form-group">
+                        <label for="comments">Mensaje:</label>
+                        <textarea name="comments" class="form-control" id="comments" maxlength="500" placeholder="Ingrese su mensaje, consulta o comentario"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button class="form__btn--submit form-control">Enviar</button>
+                    </div>
+                    <div class="form-group">    
+                        <input class="form__btn--clear form-control" type="reset" value="Borrar">
+                    </div>    
                 </form>
             </article>
         </section>

@@ -34,11 +34,11 @@ img {
 }
 
 td {
-	padding: 0 map-get($map: $spacings, $key: spacing-xsamll);
+	padding: 0 map-get($map: $spacings, $key: spacing-xsmall);
 }
 
 th {
-	padding: 0 map-get($map: $spacings, $key: spacing-xsamll);
+	padding: 0 map-get($map: $spacings, $key: spacing-xsmall);
 }
 
 h1 {
@@ -47,7 +47,7 @@ h1 {
 	font-weight: $font-weight-principal;
 	font-size: map-get($map: $font-size, $key: xlarge);
 	text-align: left;
-	padding: map-get($map: $spacings, $key: spacing-xsamll);
+	padding: map-get($map: $spacings, $key: spacing-xsmall);
 }
 
 h2 {
@@ -56,7 +56,7 @@ h2 {
 	font-weight: $font-weight-third;
 	font-size:map-get($map: $font-size, $key: xlarge); 
 	text-align: center;
-	padding: map-get($map: $spacings, $key: spacing-xsamll);
+	padding: map-get($map: $spacings, $key: spacing-xsmall);
 }
 
 h4 {
@@ -77,7 +77,7 @@ p {
 	font-weight: $font-weight-principal;
 	font-size: map-get($map: $font-size, $key: xlarge);
 	text-align: center;
-	padding: map-get($map: $spacings, $key:spacing-xsamll);
+	padding: map-get($map: $spacings, $key:spacing-xsmall);
 }
 
 .body-background-none {

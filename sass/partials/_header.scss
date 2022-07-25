@@ -4,9 +4,9 @@ header {
 	$end-color:map-get($map: $colors, $key:secondary );
 	background: linear-gradient(to left, $start-color, $end-color);
 	/*//////////////////////////////////////////////////////////////*/
-	padding: map-get($map: $spacings, $key:spacing-xsamll );
+	padding: map-get($map: $spacings, $key:spacing-xsmall );
 	$border-bottomline: map-get($map: $colors, $key:borderline);
-	border-bottom: $border-bottomline 5px solid;
+	border-bottom: $border-bottomline $xlarge solid;
 	font-family: $font-secondary;
     
     .header__logo {

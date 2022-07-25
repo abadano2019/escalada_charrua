@@ -1,45 +1,42 @@
-
-.form-container__titulo-contacto {
+.form-container__titulo-contacto{
 	font-family: $font-principal;
 	font-weight: $font-weight-principal;
 }
 
-.form-container {
+.form-container{
 	padding: map-get($map: $spacings, $key:spacing-xlarge) map-get($map: $spacings, $key:spacing-xxxlarge);
 	color:map-get($map: $colors, $key:primary-text-color );
 	font-family: $font-principal;
 	font-weight: $font-weight-secondary;
 	font-size: map-get($map: $spacings, $key:spacing-medium);
 	text-align: left;
-	padding: map-get($map: $spacings, $key:spacing-xlarge);
-	margin: 0 map-get($map: $spacings, $key:spacing-xlarge);
+	margin: 0 auto;
 	@include flex(column, na, na, center, center, na);
-	
-	h1 {
-		color: map-get($map: $colors, $key:primary-text-color );
-		font-family: $font-principal;
-		font-weight: $font-weight-principal;
-		text-align: center;
-		padding: map-get($map: $spacings, $key:spacing-xsmall);
-		@include formato_texto_titulo(map-get($map: $spacings, $key:spacing-medium));
-	}
+}
+
+h1.form-container__titulo-contacto{
+	color: map-get($map: $colors, $key:primary-text-color );
+	font-family: $font-principal;
+	font-weight: $font-weight-principal;
+	text-align: center;
+	padding: map-get($map: $spacings, $key:spacing-xsmall);
+	@include formato_texto_titulo(map-get($map: $spacings, $key:spacing-medium));
 }
 
 .form__btn{
-	text-decoration:none;
+	text-decoration: none;
 	font-weight: $font-weight-principal;
-	font-size:20px;
+	font-size: map-get($map: $font-size, $key: medium);
 	color: map-get($map: $colors, $key: primary-text-color);
-	padding-top:10px;
-	padding-bottom:10px;
-	background-color: map-get($map: $colors, $key:boton-color );
+	margin: map-get($map: $spacings, $key:spacing-xsmall) 0;
+	background-color: map-get($map: $colors, $key: boton-color);
 }
 
 .form__btn--submit{
 	@extend .form__btn;
 	&:hover {
 		background-color: map-get($map: $colors, $key:secondary-text-color);
-		color:map-get($map: $colors, $key:alternative );
+		color: map-get($map: $colors, $key:alternative);
 	}
 }
 
@@ -47,40 +44,37 @@
 	@extend .form__btn;
 	&:hover {
 		background-color: map-get($map: $colors, $key:borderline);
-		color:map-get($map: $colors, $key:alternative );
+		color:map-get($map: $colors, $key:alternative);
 	}
 }
 
-.form {
-	display: grid;
-	flex-direction: column;
-	align-items: center;
-    grid-template-columns: [labels] auto [controls] auto;
-	grid-auto-flow: row;
-    grid-gap: 0.8em;
-    background: map-get($map: $colors, $key:alternative-bg);
-	padding: map-get($map: $spacings, $key:spacing-xsamll);
-	max-width: fit-content;
-	max-height: fit-content;
+#contact-form{
+	@include flex(row, center, na, na, na, na);
+	margin: $xxlarge 0;
+}
 
-	label {
-		grid-column: labels;
-		grid-row: auto;
-	}
+#contact-form .image{
+	background-image: url("../img/desk.jpg");
+	height: $height-form-contact;
+	width: 60%;
+	background-size: cover;
+}
 
-	input,
-	textarea,
-	button {
-    	grid-column: controls;
-    	grid-row: auto;
-    	border: none;
-    	padding: 0.5em 0;
-	}
+#contact-form .frm{
+	height: $height-form-contact;
+    width: 40%;
+    min-width: $min-width-form-contact;
+    padding: 0 $xxxlarge;
+    background-size: 100% 100%;
+    background-color: map-get($map: $colors, $key: alternative );
+}
 
-	#nombre,
-	#apellido,
-	#email{
-		max-height: 5px;
-	}
-	
+.form-contacto{
+	@include flex(column, na, na, center, na, na)
+}
+
+label{
+	font-size: map-get($map: $font-size, $key:xxlarge );
+	font-weight: $font-weight-secondary;
+	padding:map-get($map: $spacings, $key: spacing-xsmall) 0;
 }

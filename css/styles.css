@@ -8,11 +8,17 @@
 /* font-family: 'Lato', sans-serif;
    font-family: 'Roboto', sans-serif;
    font-family: 'Montserrat', sans-serif;  */
-/* Variales */
+/* ---------------------- -------- ---------------------- */
+/* ---------------------- Variales ---------------------- */
+/* ---------------------- -------- ---------------------- */
 /* ///   Colors   /// */
 /* ///   Spacing   /// */
+/* ///   pixeles   /// */
 /* ///   font-family   /// */
 /*   ///   font-sizes   /// */
+/*   ///   spacing-sizes en ems  /// */
+/*   ///   font-sizes en ems  /// */
+/* /// Otras Variables  /// */
 * {
   margin: 0;
   padding: 0;
@@ -113,7 +119,7 @@ header {
 
 footer {
   background-color: darkblue;
-  padding: 0.5;
+  padding: 0.5rem;
   font-family: "Lato", sans-serif;
   border-top: #c00606 5px solid;
   height: 12rem; }
@@ -314,8 +320,7 @@ footer {
   align-content: stretch; }
 
 .empresa-formato-texto {
-  align-content: center;
-  align-items: flex-start; }
+  text-align: justify; }
 
 .cursos-descripcion {
   display: grid;
@@ -361,6 +366,74 @@ table.cursos-costos {
   text-shadow: black 0.1em 0.1em 0.2em;
   margin: 2rem; }
 
+.curso-contenedor {
+  display: flex;
+  flex-direction: column; }
+
+.curso-imagen-0 {
+  width: 70%; }
+
+.curso-imagen-1 {
+  width: 100%; }
+
+.curso-imagen-2 {
+  width: 120%; }
+
+.curso-imagen-3 {
+  width: 150%; }
+
+.formato-cursos-a {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: na;
+  gap: na;
+  align-items: na;
+  align-content: na;
+  flex-wrap: na;
+  text-align: left;
+  gap: 1rem; }
+
+.formato-cursos-b {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0;
+  align-content: flex-start;
+  flex-wrap: nowrap;
+  flex-direction: row-reverse;
+  justify-content: na;
+  gap: na;
+  align-items: left;
+  align-content: na;
+  flex-wrap: na;
+  text-align: left;
+  gap: 1rem; }
+
+.formato-texto-curso {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: na;
+  gap: na;
+  align-items: na;
+  align-content: na;
+  flex-wrap: na;
+  gap: 3rem;
+  text-align: justify; }
+
+.mas-info-curso {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #c00606; }
+
 .galeria-container__titulo-galeria {
   font-family: "Roboto", sans-serif;
   font-weight: 700; }
@@ -371,18 +444,21 @@ table.cursos-costos {
     color: yellow;
     font-family: "Roboto", sans-serif;
     font-weight: 700;
-    text-align: center; }
+    text-align: center;
+    padding: 1rem; }
   .galeria-container h2 {
     color: yellow;
     font-family: "Roboto", sans-serif;
     font-weight: 700;
-    text-align: left; }
+    text-align: left;
+    padding: 1rem; }
 
 .galeria-container-foto__desc h3 {
   color: black;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
-  text-align: left; }
+  text-align: left;
+  padding: 1rem; }
 
 .galery-titulo h1 {
   text-align: center;
@@ -502,6 +578,8 @@ table.cursos-costos {
   grid-auto-flow: column;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 1rem;
   border: 5px solid #c00606;
   margin-bottom: 5rem;
   align-content: stretch; }
@@ -537,8 +615,7 @@ table.cursos-costos {
   font-weight: 500;
   font-size: 2rem;
   text-align: left;
-  padding: 5rem;
-  margin: 0 5rem;
+  margin: 0 auto;
   display: flex;
   justify-content: flex-start;
   gap: 0;
@@ -549,22 +626,23 @@ table.cursos-costos {
   align-items: center;
   align-content: center;
   flex-wrap: na; }
-  .form-container h1 {
-    color: yellow;
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-align: center;
-    text-shadow: black 0.1em 0.1em 0.2em;
-    margin: 2rem; }
+
+h1.form-container__titulo-contacto {
+  color: yellow;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  padding: 1rem;
+  text-align: center;
+  text-shadow: black 0.1em 0.1em 0.2em;
+  margin: 2rem; }
 
 .form__btn, .form__btn--submit, .form__btn--clear {
   text-decoration: none;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 2rem;
   color: yellow;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  margin: 1rem 0;
   background-color: #005BBB; }
 
 .form__btn--submit:hover {
@@ -575,31 +653,51 @@ table.cursos-costos {
   background-color: #c00606;
   color: white; }
 
-.form {
-  display: grid;
+#contact-form {
+  display: flex;
+  gap: 0;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+  gap: na;
+  align-items: na;
+  align-content: na;
+  flex-wrap: na;
+  margin: 20px 0; }
+
+#contact-form .image {
+  background-image: url("../img/desk.jpg");
+  height: 500px;
+  width: 60%;
+  background-size: cover; }
+
+#contact-form .frm {
+  height: 500px;
+  width: 40%;
+  min-width: 250px;
+  padding: 0 35px;
+  background-size: 100% 100%;
+  background-color: white; }
+
+.form-contacto {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0;
+  align-content: flex-start;
+  flex-wrap: nowrap;
   flex-direction: column;
+  justify-content: na;
+  gap: na;
   align-items: center;
-  grid-template-columns: [labels] auto [controls] auto;
-  grid-auto-flow: row;
-  grid-gap: 0.8em;
-  background: darkgoldenrod;
-  padding: 1rem;
-  max-width: fit-content;
-  max-height: fit-content; }
-  .form label {
-    grid-column: labels;
-    grid-row: auto; }
-  .form input,
-  .form textarea,
-  .form button {
-    grid-column: controls;
-    grid-row: auto;
-    border: none;
-    padding: 0.5em 0; }
-  .form #nombre,
-  .form #apellido,
-  .form #email {
-    max-height: 5px; }
+  align-content: na;
+  flex-wrap: na; }
+
+label {
+  font-size: 20px;
+  font-weight: 500;
+  padding: 1rem 0; }
 
 /* PARTIALS */
 /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
@@ -661,7 +759,22 @@ table.cursos-costos {
   .galery .card-4 {
     grid-column: 1/13;
     grid-row: 4;
-    object-fit: cover; } }
+    object-fit: cover; }
+  .formato-cursos-a {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .formato-cursos-b {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  picture.curso-imagen-0,
+  picture.curso-imagen-1,
+  picture.curso-imagen-2,
+  picture.curso-imagen-3 {
+    width: 50%; } }
 
 /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@    Breakpint 650px  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
 @media screen and (max-width: 650px) {
@@ -715,7 +828,12 @@ table.cursos-costos {
   .empresa-articulo-4 {
     padding-bottom: 7rem; }
   .carousel-item .carousel-caption p {
-    font-size: 2rem; } }
+    font-size: 2rem; }
+  /* ----------------------------------*/
+  /* ----------     Form     ----------*/
+  /* ----------------------------------*/
+  #contact-form .image {
+    background-image: url("/img/contacto-2.jpg"); } }
 
 /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@    Breakpint 500px  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
 @media screen and (max-width: 500px) {
@@ -723,7 +841,7 @@ table.cursos-costos {
     flex-direction: row;
     gap: 2rem; }
   h1 {
-    font-size: 16px; }
+    font-size: 18px; }
   .galery-subtitulo-1 h2 {
     font-size: 2rem; }
   .galery-subtitulo-top4 h2 {
@@ -750,6 +868,8 @@ table.cursos-costos {
       align-content: center;
       flex-wrap: wrap;
       float: right; }
+    footer img.footer-right__img {
+      width: 25%; }
   /* ----------------------------------*/
   /* ----------   Empresa    ----------*/
   /* ----------------------------------*/
@@ -764,27 +884,31 @@ table.cursos-costos {
   /* ----------------------------------*/
   /* ----------     Form     ----------*/
   /* ----------------------------------*/
-  .form {
-    display: grid;
-    flex-direction: row;
-    grid-template-columns: [labels] 50px [controls] 100px;
-    grid-auto-flow: row;
-    grid-gap: 0.8em;
-    background: darkgoldenrod;
-    padding: 1em;
-    max-width: fit-content; }
-    .form label {
-      grid-column: labels;
-      grid-row: auto;
-      font-size: 1.5rem;
-      align-content: center; }
-    .form input,
-    .form textarea,
-    .form button {
-      grid-column: controls;
-      grid-row: auto;
-      border: none;
-      padding: 1rem 0; }
+  #contact-form .image {
+    display: none; }
+  .form__btn, .form__btn--submit, .form__btn--clear {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 15px;
+    color: yellow;
+    margin: 1rem 0;
+    background-color: #005BBB; }
+  #contact-form .frm {
+    width: 100%; }
+  #contact-form .btn {
+    width: 100%;
+    margin-top: 20px; }
+  #contact-form .frm {
+    height: 500px;
+    width: 100%;
+    min-width: 250px;
+    padding: 0 35px;
+    margin: 20px;
+    background-size: 100% 100%;
+    background-color: white; }
+  label {
+    font-size: 15px;
+    font-weight: 500; }
   /* ----------------------------------*/
   /* ----------    Cursos    ----------*/
   /* ----------------------------------*/
@@ -818,18 +942,25 @@ table.cursos-costos {
   .carousel-item .carousel-caption p {
     font-size: 2rem; }
   .form__btn, .form__btn--submit, .form__btn--clear {
-    padding-top: 10px;
-    padding-bottom: 10px; } }
+    padding-top: 10px 0; }
+  picture.curso-imagen-0,
+  picture.curso-imagen-1,
+  picture.curso-imagen-2,
+  picture.curso-imagen-3 {
+    width: 80%; } }
 
+/*  ///////////////////////////////////////////////////////////////////////  */
+/*      Ajustes realizados sobre los componentes de boostrap utilizados      */
+/*  ///////////////////////////////////////////////////////////////////////  */
 a.nav-link {
   color: yellow;
   font-size: 2rem; }
 
 img.d-inline-block.align-top {
-  padding: 0 1rem; }
+  padding: 0; }
 
 span.navbar-toggler-icon {
-  border: 3px solid yellow;
+  border: 5px solid yellow;
   width: 3rem;
   height: 3rem; }
 
@@ -902,7 +1033,7 @@ div .card-body h6 {
   color: #0495c5; }
 
 #email-suscribeme {
-  max-height: 2px; }
+  max-height: 2rem; }
 
 .form div {
   display: grid;
@@ -915,14 +1046,6 @@ div .card-body h6 {
   padding: 1rem;
   max-width: fit-content;
   max-height: fit-content; }
-
-input,
-label,
-button {
-  grid-column: controls;
-  grid-row: auto;
-  border: none;
-  padding: 1em 0; }
 
 .cursos-cards {
   display: flex;
@@ -941,11 +1064,15 @@ button {
   .navbar .navbar-nav {
     gap: 1rem; }
     .navbar .navbar-nav .nav-link {
-      border: 1px solid darkblue;
+      border: 2px solid darkblue;
       transition: border 0.8s ease-in-out; }
       .navbar .navbar-nav .nav-link:hover {
         border-color: yellow; }
 
+/*  /////////////////////////////////////////////////////////////  */
+/* Ajustes realizados sobre los componentes de boostrap utilizados */
+/*                    Para las Media Query                         */
+/*  /////////////////////////////////////////////////////////////  */
 @media (min-width: 992px) {
   .navbar-expand-lg .navbar-collapse {
     display: flex;
@@ -953,12 +1080,14 @@ button {
     justify-content: flex-end;
     flex-direction: row; } }
 
+/*////////////////////////////////////////////////////////////////////////////*/
 @media (max-width: 991px) {
   .navbar .navbar-nav {
     gap: 0rem; }
     .navbar .navbar-nav .nav-link {
       border: none; } }
 
+/*////////////////////////////////////////////////////////////////////////////*/
 @media (min-width: 0) and (max-width: 400px) {
   .card .card-body p,
   .card .card-body .card-text p {

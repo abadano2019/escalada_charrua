@@ -2,35 +2,33 @@ footer {
     background-color:map-get($map: $colors, $key: primary);
 	padding: map-get($map: $spacings, $key: spacing-xxsmall );
 	font-family: $font-secondary;
-    $border-topline: map-get($map: $colors, $key:borderline);
-	border-top: $border-topline 5px solid;
-	height: 12rem;
+    $color-border-topline: map-get($map: $colors, $key:borderline);
+	border-top: $color-border-topline $xlarge solid;
+	height: $footer-height;
 
-    .footer-container {
+    .footer-container{
         @include flex(row, center, na, center, center, na);
-        height: 100px;
+        height: $container-footer-height;
         margin: 0 map-get($map: $spacings, $key: spacing-xlarge);
     }
     
-    .footer-right {
+    .footer-right{
         width: 75%;
         @include flex(row, flex-end, na, center, center, wrap);
         float:right;
     }
     
-    .footer-left {
+    .footer-left{
         width: 25%;
         @include flex(column, center, na, flex-start, na, wrap);
         float: left;
         padding: 0 0;
     }
     
-    .footer-right__img {
+    .footer-right__img{
         display:flex;
         flex-basis: 1%;
         align-items:flex-end;
-        padding: map-get($map: $spacings, $key: spacing-xsamll );
-    }
-   
+        padding: map-get($map: $spacings, $key: spacing-xsmall );
+    }   
 }
-
